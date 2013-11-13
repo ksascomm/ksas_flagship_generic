@@ -1145,6 +1145,10 @@ div.orbit-wrapper div.timer {
 	 
 }
 
+#quicklinks .flyout.up {
+bottom: 36px;
+}
+
 #quicklinks ul.flyout li { 
 	border-left: none; 
 }
