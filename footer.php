@@ -38,10 +38,10 @@
 		
   	</div>
   	<!-- Copyright and Address -->
-  	<div class="row hide-for-print" id="copyright" role="content-info">
+  	<div class="row" id="copyright" role="content-info">
   		<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, <?php echo $theme_option['flagship_sub_copyright'];?></p>
   	</div>
-	<div class="row">
+	<div class="row hide-for-print">
 		<div class="four columns centered">
 			<a href="http://www.jhu.edu"><img src="<?php echo get_template_directory_uri() ?>/assets/images/university.jpg" /></a>
 		</div>

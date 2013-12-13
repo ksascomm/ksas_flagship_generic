@@ -1572,7 +1572,8 @@ margin: 0;
 
 @media print {
 	ul.accordion .content {display: block !important;}
-	.hide-for-print {display: none !important;}
+	.hide-for-print, #logo_nav h1 {display: none !important;}
+	.row .wrapper.nine {width: 100% !important; }
 
 }
 /*******Attributions*******/
