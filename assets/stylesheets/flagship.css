@@ -29,6 +29,8 @@ strong, b,
 	font-family: 'flagship-icon';
 }
 
+.capitalize {text-transform: capitalize; }
+
 .copy h2 {
 	color: #336699;
 }
@@ -61,6 +63,8 @@ ol {
 	list-style-type: decimal;
 	margin-bottom: 14px;
 }
+
+code {background: none; }
 
 .nav-bar li .flyout li .flyout {
 position: absolute;
@@ -1511,6 +1515,69 @@ clear: both;
 width: 100%;
 padding: 0;
 margin: 0;
+}
+
+.quicksearch-match {display: none;}
+
+#fields_search fieldset {
+	background: #ccc;
+	background: rgba(0,0,0,0.15);
+	border:none;
+}
+
+#field_search,
+#field_search label {
+	font-family: "Myriad W01 SmBd", Arial, sans-serif;
+	color: #FFF;
+	font-size: 16px;
+}
+
+#field_search label {
+	margin-top: 6px;
+	display: inline;
+}
+
+#fields_search input[type="text"] {
+    height: 40px;
+    margin-bottom: 10px;
+    -webkit-border-top-right-radius: 	7px;
+    -webkit-border-bottom-right-radius: 7px;
+    -moz-border-radius-topright: 		7px;
+    -moz-border-radius-bottomright: 	7px;
+    border-top-right-radius: 			7px;
+    border-bottom-right-radius: 		7px;
+    display: inline;
+    float:left;
+    width:83%;
+    background: #666;
+	color:#ccc;
+	font-family:"Myriad W01 It";
+	font-size: 16px;
+	border:none;
+
+}
+
+#fields_search input[type="submit"] {
+	background: #333;
+	height: 40px;
+	width: 45px;
+	font-family: 'flagship-icon';
+	-webkit-border-top-left-radius: 	7px;
+	-webkit-border-bottom-left-radius: 	7px;
+	-moz-border-radius-topleft: 		7px;
+	-moz-border-radius-bottomleft: 		7px;
+	border-top-left-radius: 			7px;
+	border-bottom-left-radius: 			7px;
+	font-size: 26px;
+	border:none;
+	float:left;
+	padding:0;
+	color:#ccc;
+}
+/*******Site Specific*******/
+
+body.page-id-8.site-25 section h2 {
+	display: none;
 }
 
 @media only screen and (max-width: 1024px) {
