@@ -14,7 +14,7 @@
   <!-- CSS Files: Conditionals -->
   
   <!-- Modernizr and Jquery Script -->
-  <script async src="<?php echo get_template_directory_uri() ?>/assets/javascripts/modernizr.foundation.js"></script>
+  <script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/modernizr.foundation.js"></script>
   <?php wp_enqueue_script('jquery'); ?> 
   <?php wp_head(); ?>
 
