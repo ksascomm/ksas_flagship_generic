@@ -39,6 +39,19 @@ jQuery(document).ready(function () {
    </script>
  <?php } ?> 
  
+ <!***********DIRECTORY**************>
+<?php $theme_option = flagship_sub_get_global_options();
+if ( is_page_template( 'template-people-index.php' ) && $theme_option['flagship_sub_directory_search']  == '1' )  { ?>
+  	<script src="<?php echo get_template_directory_uri() ?>/assets/javascripts/min.page.directory.js"></script>
+  	<script>
+	    var $j = jQuery.noConflict();
+	    $j(window).load(function() {
+	        var filterFromQuerystring = getParameterByName('filter');
+	        $j('.filter a[data-filter=".' + filterFromQuerystring  + '"]').click();
+	    });
+	</script>
+<?php } ?>
+
 <!***********EVENT CALENDAR**************>
 <?php $theme_option = flagship_sub_get_global_options();
 if ( is_page_template( 'template-calendar.php' ))  { ?>   				
