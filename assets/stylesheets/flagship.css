@@ -206,7 +206,7 @@ button,
 	font-weight: normal;
 }
 
-.button,
+
 .select-buttons li {
 	display: inline;
 }
@@ -1518,7 +1518,7 @@ margin: 0;
 }
 
 .quicksearch-match {display: none;}
-
+.person.quicksearch-match {display: block; }
 #fields_search fieldset {
 	background: #ccc;
 	background: rgba(0,0,0,0.15);
@@ -1574,6 +1574,48 @@ margin: 0;
 	padding:0;
 	color:#ccc;
 }
+
+#directory {
+	list-style: none;
+}
+
+#directory li:nth-child(odd) {
+	background: #f7f7f7;
+	background: rgba(0,0,0,0.05);
+}
+
+#directory p {
+	margin-top: 20px;
+}
+
+li.person {
+	margin-bottom:15px;
+	width: 90%;
+	min-height: 95px;
+	padding-left:20px;
+	padding-top: 3px;
+	list-style: none;
+}
+
+#directory li.person.sub-head {
+	min-height: 1px;
+	margin-bottom: 0;
+	background: none;
+	padding: 0;
+}
+
+li.person.sub-head h2 {
+	font-size: 32px;
+	margin: 0 0 10px 0;
+	color: #000;
+}
+li.person img {
+	max-width: 90px;
+	clear: left;
+	float:left;
+	margin-bottom: 23px;
+}
+
 /*******Site Specific*******/
 
 body.page-id-8.site-25 section h2 {

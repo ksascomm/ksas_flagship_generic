@@ -29,11 +29,15 @@ Template Name: People Directory
 	<div class="nine columns wrapper radius-right offset-topgutter">
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
 		<section>
+
 	<section class="row">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h2><?php the_title();?></h2>
 		<?php endwhile; endif; ?>
-	</section>
+		<?php $theme_option = flagship_sub_get_global_options();
+			$research_label = $theme_option['flagship_sub_research_label'];
+				if ( $theme_option['flagship_sub_directory_search']  == '1' ) { get_template_part('parts', 'directory-search'); } ?>
+	</section>	
 	
 	<section class="row" id="fields_container">
 		<ul class="twelve columns" id="directory">
@@ -50,9 +54,9 @@ Template Name: People Directory
 						'posts_per_page' => '-1'));        	
 			
 			if ($people_query->have_posts()) : ?>
-				<li class="person sub-head"><h2 class="capitalize"><?php echo $role_name; ?></h2></li>
+				<li class="person sub-head <?php echo $filter_classes . ' ' . $role_classes; ?>"><h2 class="capitalize"><?php echo $role_name; ?></h2></li>
 			<?php while ($people_query->have_posts()) : $people_query->the_post(); ?>
-				<li class="person">
+				<li class="person <?php echo get_the_directory_filters($post);?> <?php echo get_the_roles($post); ?>">
 					<div class="row">
 						<div class="twelve columns">
 							<?php if ( get_post_meta($post->ID, 'ecpt_website', true) ) : ?>
@@ -79,7 +83,7 @@ Template Name: People Directory
 											<span class="icon-location"><?php echo get_post_meta($post->ID, 'ecpt_office', true); ?></span>
 										<?php endif; ?>
 									</p>
-						<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?><p><b>Research Interests:&nbsp;</b><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p><?php endif; ?>
+						<?php if ( get_post_meta($post->ID, 'ecpt_expertise', true) ) : ?><p><b><?php echo $research_label; ?>:&nbsp;</b><?php echo get_post_meta($post->ID, 'ecpt_expertise', true); ?></p><?php endif; ?>
 					</div>
 				</li>		
 		<?php endwhile; endif; } wp_reset_postdata(); ?>
