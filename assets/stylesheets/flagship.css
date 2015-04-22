@@ -1,28 +1,71 @@
 /******* Fonts ************/
 
-body {
-	font-family: "Myriad W01 Regular", Arial, sans-serif;
-	background: #000;
+@font-face {
+  font-family: 'quadon';
+  src: url('../fonts/quadon/Quadon-Medium.eot');
+  src: url('../fonts/quadon/Quadon-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/quadon/Quadon-Medium.woff') format('woff'),
+       url('../fonts/quadon/Quadon-Medium.ttf') format('truetype');
 }
 
-h1, h2, h3, h4, h5, h6, .semibold,
+@font-face {
+  font-family: 'gentona-book';
+  src: url('../fonts/gentona/Gentona-Book.eot');
+  src: url('../fonts/gentona/Gentona-Book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Book.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Book.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'gentona-light';
+  src: url('../fonts/gentona/Gentona-Light.eot');
+  src: url('../fonts/gentona/Gentona-Light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gentona/Gentona-Light.woff') format('woff'),
+       url('../fonts/gentona/Gentona-Light.ttf') format('truetype');
+}
+
+
+body {
+	font-family: 'gentona-light', Arial, sans-serif;
+	background: #000;
+	font-weight: 300;
+  	font-style: normal;
+}
+
+h1, h2 {
+	font-family: 'quadon', Arial, sans-serif;
+color: #005eb8;
+}
+
+h3, h4, h5, h6, .semibold {
+  font-family: 'gentona-book', Arial, sans-serif;
+  color: #005eb8;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 table thead tr th, table tfoot tr td  {
-	font-family: "Myriad W01 SmBd", Arial, sans-serif;
-	color:#3478b6;
-	font-weight: normal;
+	font-family: 'quadon', Arial, sans-serif;
+	color:#418fde;;
+	font-weight: 400;
+  font-style: normal;
 }
 
 em, i,
 blockquote,
 blockquote p,
 .italic {
-	font-family:"Myriad W01 It";
+	font-family: 'gentona-light', Arial, sans-serif;
+   font-weight: 300;
+  font-style: italic;
 }
 
 strong, b,
 .bold {
-	font-family:"Myriad W01 Bd";
-	font-weight: normal;
+font-family: 'gentona-book', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .iconfont {
@@ -32,12 +75,13 @@ strong, b,
 .capitalize {text-transform: capitalize; }
 
 .copy h2 {
-	color: #336699;
+	color: #005eb8;
 }
 
 p {
 	line-height: 1.3em;
 	color: #333;
+	font-size: 16px;
 }
 
 .content p {
@@ -48,7 +92,9 @@ h6,
 time {
 	font-size:10px;
 	color:#666;
-	font-family:"Myriad W01 Bd";
+font-family: 'gentona-book', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	margin-bottom: 3px;
@@ -72,6 +118,11 @@ left: 244px;
 top: 1px;
 padding: 0; }
 /******* Reusable Classes ************/
+
+body.custom-background {
+background-size: cover;
+}
+
 .wrapper {
 	background: rgb(255,255,255);
 	background: rgba(255,255,255, 0.95);
@@ -131,17 +182,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fcfcfc', e
 }
 
 .blue {
-	color:#3478b6
+	color:#418fde;
 }
 
 .blue_bg,
 .color1 {
-	background: #3478b6;
+	background: #005eb8;
 }
 
 .dark_blue_bg,
 .color8 {
-	background:#003366;
+	background:#005eb8;
 }
 
 .grey_bg,
@@ -151,26 +202,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fcfcfc', e
 
 .rust_bg,
 .color7 {
-	background: #663333;
+	background: #6f2c3f;
 }
 .green_bg,
 .color4{
-	background: #006666;
+	background: #007a53;
 }
 
 .purple_bg,
 .color5 {
-	background: #333366;
+	background: #24135f;
 }
 
 .fushia,
 .color6  {
-	background: #993366;
+	background: #8e3a80;
 }
 
 .yellow_bg,
 .color2 {
-	background: #dbb003;
+	background: #cba052;
 }
 
 .orange_bg,
@@ -184,7 +235,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fcfcfc', e
 .color0,
 .SECalendarPrevMonth,
 .SECalendarNextMonth {
-	background: #3399ff;
+	background: #68ace5;
 }
 
 button,
@@ -196,7 +247,7 @@ button,
 	-webkit-border-radius:  7px;
 	-moz-border-radius: 	7px;
 	border-radius: 			7px;
-	font-family: "Myriad W01 SmBd", Arial, sans-serif;
+	font-family: 'quadon', Arial, sans-serif;
 	color: #FFF;
 	font-size: 16px;
 	padding:8px 12px;
@@ -206,7 +257,7 @@ button,
 	font-weight: normal;
 }
 
-
+.button,
 .select-buttons li {
 	display: inline;
 }
@@ -350,7 +401,7 @@ ul {
 	line-height: 1.4em;
 }
 .panel {
-	background: #3478b6;
+	background: #418fde;;
 	border:none;
 	color: #FFF;
 	font-size: 14px;
@@ -386,7 +437,7 @@ ul {
 }
 .callout.panel p,
 .callout.panel ul {
-	font-family: "Myriad W01 SmBd", Arial, sans-serif;
+	font-family: 'quadon', Arial, sans-serif;
 }
 .callout.panel h3,
 .callout.panel li:before,
@@ -415,7 +466,7 @@ ul {
 .video_thumb .icon-play:before {
 	position: absolute;
 	top:20%;
-	color:#336699;
+	color:#005eb8;
 	left:36%;
 	font-size: 74px;
 	opacity: .8;
@@ -443,7 +494,7 @@ blockquote:before {
 	bottom:20%;
 	right: 8%;
 	opacity: .25;
-	color: #336699;	
+	color: #005eb8;	
 }
 
 .wp-post-image {
@@ -594,8 +645,7 @@ ul.breadcrumbs a{
 	margin: 0 auto;
 }
 #logo_nav {
-	background:	rgb(51, 102, 153);
-	background: rgba(51, 102, 153, .9);
+	background:	#005eb8;
 	width: 100%;
 	max-width:1000px; 
 	-webkit-border-top-right-radius: 	10px;
@@ -624,7 +674,7 @@ ul.breadcrumbs a{
 	border-radius: 			10px;
 	color: #ccc;
 	text-transform: uppercase;
-	font-family:"Myriad W01 Bd";
+	font-family:'quadon', Arial, sans-serif;
 	margin-top:5px;
 	margin-bottom: 10px;
 }
@@ -772,7 +822,7 @@ aside ul.nav li {
 #sidebar .widget_title {
 	padding: 10px 0;
 	margin-bottom: 15px;
-	background-color: #3478b6;
+	background-color: #005eb8;
 	color: #FFF;
 }
 
@@ -787,8 +837,10 @@ aside ul.nav li {
 
 .sidebar_bg ul.nav li a,
 #sidebar li a {
-	font-family: "Myriad W01 SmBd", Arial, sans-serif;
-	color:#336699;
+	font-family: 'gentona-book', Arial, sans-serif;
+	color:#005eb8;
+	 font-weight: 400;
+  font-style: normal;
 }
 
 .textwidget,
@@ -878,7 +930,7 @@ aside ul.nav li {
 	color:#663333;
 	font-size:20px;
 	margin-bottom:10px;
-	font-family:"Myriad W01 Bd";
+	font-family:'quadon', Arial, sans-serif;
 }
 
 #SECalendarListWrapper .SECalendarEventTime,
@@ -886,7 +938,7 @@ aside ul.nav li {
 	color: #333;
 	font-size:10px;
 	font-weight:normal;
-	font-family: "Myriad W01 Regular", Arial, sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -897,7 +949,7 @@ aside ul.nav li {
 	color: #3399ff;
 	font-size:14px;
 	font-weight:normal;
-	font-family: "Myriad W01 Regular", Arial, sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 }
 
 #SECalendarListWrapper .SECalendarThumb {
@@ -905,7 +957,7 @@ aside ul.nav li {
 }
 
 .SECalendarEventName h3 {
-	font-family:"Myriad W01 Bd";
+	font-family:'quadon', Arial, sans-serif;
 	font-size: 18px;
 }
 
@@ -924,7 +976,7 @@ aside ul.nav li {
 }
 
 #SECalendarListWrapper .SECalendarPropertyLabel {
-	font-family:"Myriad W01 Bd";
+	font-family:'quadon', Arial, sans-serif;
 	float:left;
 	margin-right:10px;
 }
@@ -963,7 +1015,7 @@ a.rssLink,
 }
 
 #SECalendarNav .SECalendarMonth {
-	font-family: "Myriad W01 SmBd", Arial, sans-serif;
+	font-family: 'quadon', Arial, sans-serif;
 	font-size: 28px;
 	margin-top: 5px;
 }
@@ -1032,7 +1084,7 @@ background: #3279BB;
 
 .pagination .current{
 padding:6px 9px 5px 9px;
-background: #3478b6;
+background: #418fde;;
 color:#fff;
 }
 
@@ -1128,7 +1180,7 @@ div.orbit-wrapper div.timer {
 
 #quicklinks li.has-flyout {
 	background: #d07b00;
-	font-family:"Myriad W01 Bd";
+	font-family:'quadon', Arial, sans-serif;
 	color: #FFF;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -1160,7 +1212,7 @@ bottom: 36px;
 #quicklinks ul.flyout li a { 
 	background: #f2f2f2; 
 	border-bottom: 1px solid #e6e6e6; 
-	font-family: "Myriad W01 Regular", Arial, sans-serif;
+	font-family: 'gentona-light', Arial, sans-serif;
 	color: #555; 
 	display: block; 
 	font-size: 12px; 
@@ -1376,6 +1428,47 @@ a[href*=".pdf"]:before {
 	content: "\f0ac";
 }
 
+#directory {
+	list-style: none;
+}
+
+#directory li:nth-child(odd) {
+	background: #f7f7f7;
+	background: rgba(0,0,0,0.05);
+}
+
+#directory p {
+	margin-top: 20px;
+}
+
+li.person {
+	margin-bottom:15px;
+	width: 90%;
+	min-height: 95px;
+	padding-left:20px;
+	padding-top: 3px;
+	list-style: none;
+}
+
+#directory li.person.sub-head {
+	min-height: 1px;
+	margin-bottom: 0;
+	background: none;
+	padding: 0;
+}
+
+li.person.sub-head h2 {
+	font-size: 32px;
+	margin: 0 0 10px 0;
+	color: #000;
+}
+li.person img {
+	max-width: 90px;
+	clear: left;
+	float:left;
+	margin-bottom: 23px;
+}
+
 
 /* #######################################################################
 
@@ -1518,7 +1611,7 @@ margin: 0;
 }
 
 .quicksearch-match {display: none;}
-.person.quicksearch-match {display: block; }
+
 #fields_search fieldset {
 	background: #ccc;
 	background: rgba(0,0,0,0.15);
@@ -1527,7 +1620,7 @@ margin: 0;
 
 #field_search,
 #field_search label {
-	font-family: "Myriad W01 SmBd", Arial, sans-serif;
+	font-family: 'quadon', Arial, sans-serif;
 	color: #FFF;
 	font-size: 16px;
 }
@@ -1551,7 +1644,7 @@ margin: 0;
     width:83%;
     background: #666;
 	color:#ccc;
-	font-family:"Myriad W01 It";
+	font-family:'gentona-light', Arial, sans-serif;
 	font-size: 16px;
 	border:none;
 
@@ -1574,48 +1667,6 @@ margin: 0;
 	padding:0;
 	color:#ccc;
 }
-
-#directory {
-	list-style: none;
-}
-
-#directory li:nth-child(odd) {
-	background: #f7f7f7;
-	background: rgba(0,0,0,0.05);
-}
-
-#directory p {
-	margin-top: 20px;
-}
-
-li.person {
-	margin-bottom:15px;
-	width: 90%;
-	min-height: 95px;
-	padding-left:20px;
-	padding-top: 3px;
-	list-style: none;
-}
-
-#directory li.person.sub-head {
-	min-height: 1px;
-	margin-bottom: 0;
-	background: none;
-	padding: 0;
-}
-
-li.person.sub-head h2 {
-	font-size: 32px;
-	margin: 0 0 10px 0;
-	color: #000;
-}
-li.person img {
-	max-width: 90px;
-	clear: left;
-	float:left;
-	margin-bottom: 23px;
-}
-
 /*******Site Specific*******/
 
 body.page-id-8.site-25 section h2 {
