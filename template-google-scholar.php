@@ -7,7 +7,7 @@ Template Name: Google Scholar Page
 <div class="row sidebar_bg radius10">
 <?php locate_template('parts-nav-sidebar.php', true, false); ?>
 	<div class="nine columns wrapper radius-right offset-topgutter">
-		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
+		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>
 		<section>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<h2>Publications</h2>
@@ -18,21 +18,21 @@ Template Name: Google Scholar Page
 				$older_pubs = 'http://scholar.google.com/citations?hl=en&user=' . $google_id . '&pagesize=100&sortby=pubdate&view_op=list_works&cstart=100';
 				$google = file_get_html($google_url);
 
-				foreach($google->find('tr.item') as $article) {
-				    $item['title']  = $article->find('td#col-title a', 0)->plaintext;
-				    $item['link']	= $article->find('td#col-title a', 0)->href;
-				    $item['pub']	= $article->find('td#col-title span.cit-gray', 1)->plaintext;
-				    $item['year']   = $article->find('td#col-year', 0)->plaintext;
-    
+				foreach($google->find('tr.gsc_a_tr') as $article) {
+				    $item['title']  = $article->find('td.gsc_a_t a', 0)->plaintext;
+				    $item['link']	= $article->find('td.gsc_a_c a', 0)->href;
+				    $item['pub']	= $article->find('td.gsc_a_t .gs_gray', 1)->plaintext;
+				    $item['year']   = $article->find('td.gsc_a_y', 0)->plaintext;
+
     ?>
     <p class="pub"><b><a href="http://scholar.google.com<?php echo $item['link'];?>"><?php echo $item['title']; ?></a></b></p>
     <h6 class="pub"><?php echo $item['year']; ?>, <?php echo $item['pub']; ?></h6>
-    
-    
+
+
     <?php } ?>
 <p align="right"><b><a href="<?php echo $older_pubs; ?>">View Older Publications</a></b></p>
 		<?php endwhile; endif; ?>
 		</section>
 	</div>
-</div> 
+</div>
 <?php get_footer(); ?>
