@@ -32,6 +32,11 @@ body {
   	font-style: normal;
 }
 
+body, div, dl, dt, dd, ul, ol, li { 
+	font-size: 16px; 
+}
+
+
 h1, h2 {
 	font-family: 'quadon', Arial, sans-serif;
 	color: #005eb8;
@@ -624,7 +629,7 @@ ul.breadcrumbs a{
 	height: 122px;
 }
 .mobile-logo a {
-	background: url('../images/logo.png') no-repeat top;
+	background: url('../images/ksas-logo-horizontal.png') no-repeat top;
 	width: 222px;
 	height: 133px;
 	margin-top:-61px;

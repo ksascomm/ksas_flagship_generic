@@ -1,4 +1,5 @@
-	<nav class="three columns hide-for-print" role="navigation" id="sidebar"> <!-- Begin Sidebar -->
+	<nav class="three columns hide-for-print" role="navigation" id="sidebar" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"> 
+	<!-- Begin Sidebar -->
 		<div class="blue_bg radius-topleft offset-gutter hide-for-small" id="sidebar_header">
 			<h5 class="white">Site Navigation</h5>
 		</div>

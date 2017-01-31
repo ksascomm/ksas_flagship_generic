@@ -1,4 +1,4 @@
-  <footer>
+<footer itemscope="itemscope" itemtype="http://schema.org/WPFooter">
   	<div class="row hide-for-print">		
   		<?php //Check Theme Options for Quicklinks setting 
 	  		$theme_option = flagship_sub_get_global_options(); 
@@ -30,10 +30,11 @@
 				'walker' => new foundation_navigation() ) ); 
 		 ?>
 		<!-- Social Media -->
-		<nav class="two column iconfont" id="social-media">
-			<a href="http://facebook.com/jhuksas" title="Facebook"><span class="icon-facebook"></span></a>
-			<a href="http://vimeo.com/channels/jhuksas" title="Vimeo"><span class="icon-vimeo"></span></a>
-		</nav>
+		<nav class="two column">
+			<a href="http://facebook.com/jhuksas" title="Facebook"><span class="fa fa-facebook-official fa-3x"></span></a>
+				&nbsp;
+			<a href="https://www.youtube.com/user/jhuksas" title="YouTube"><span class="fa fa-youtube-square fa-3x"></a>
+		</div>
 		
 		
   	</div>
