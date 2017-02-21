@@ -8,9 +8,9 @@ Template Name: List Children Links
 <?php locate_template('parts-nav-sidebar.php', true, false); ?>
 	<div class="nine columns wrapper radius-right offset-topgutter">
 		<?php locate_template('parts-nav-breadcrumbs.php', true, false); ?>	
-		<section>
+		<main class="content page-content">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h2><?php the_title();?></h2>
+				<h1 class="page-title" itemprop="headline"><?php the_title();?></h1>
 				<?php the_content(); ?>
 				<?php
 					$children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
@@ -20,7 +20,7 @@ Template Name: List Children Links
 						</ul>
 			<?php } endwhile; endif; ?>
 			
-		</section>
+		</main>
 	</div>
 </div> 
 <?php get_footer(); ?>

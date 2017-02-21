@@ -13,7 +13,7 @@ $collection_name = $theme_option['flagship_sub_search_collection'];
 <div class="row sidebar_bg radius10">
 <?php locate_template('parts-nav-sidebar.php', true, false); ?>
 	<div class="nine columns wrapper radius-right offset-topgutter">
-		<h2>Search Results</h2>
+		<h1 class="page-title">Search Results</h2>
 
 
 <?php 

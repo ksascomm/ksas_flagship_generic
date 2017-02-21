@@ -4,26 +4,24 @@
 <?php locate_template('parts-nav-sidebar.php', true, false); ?>	
 	<div class="nine columns wrapper radius-left offset-topgutter">
 		<?php $theme_option = flagship_sub_get_global_options(); ?>	
-		<section class="content">
-		<h2><?php echo $theme_option['flagship_sub_feed_name']; ?></h2>
+		<main class="content post-archive">
+		<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
 
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="row">		
-		<section class="twelve columns">
-				<a href="<?php the_permalink(); ?>">
-					<h6><?php the_date(); ?></h6>
-					<h5><?php the_title();?></h5>
-					<?php if ( has_post_thumbnail()) { ?> 
-						<div class="floatleft">
-							<?php the_post_thumbnail('thumbnail'); ?>
-						</div>
-					<?php } ?>
-					<?php the_excerpt(); ?>
-				</a>
+		<article id="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+			<h5 class="black" itemprop="datePublished"><?php the_date(); ?></h5>
+			<h3><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
+			<?php if ( has_post_thumbnail()) { ?> 
+				<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+			<?php } ?>
+			<?php the_excerpt(); ?>
 				<hr>
-		</section>
-	</div>
-	<?php endwhile; endif; ?>		
+		</article>
+		</div>
+	
+	<?php endwhile; endif; ?>	
+	</main>	
 	</div>	<!-- End main content (left) section -->
 </div> 
 <?php get_footer(); ?> 

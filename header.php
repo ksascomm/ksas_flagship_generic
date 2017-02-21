@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/foundation.css">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/assets/stylesheets/flagship.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css">
 
   <!-- CSS Files: Conditionals -->
   
@@ -67,12 +68,14 @@
 			<div class="twelve columns hide-for-small radius10" id="logo_nav">
 				<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">Krieger School of Arts & Sciences</a></li>
 
-				<a href="<?php echo site_url(); ?>">
-					<h1 class="white">
-					<span class="small"><?php echo get_bloginfo ( 'description' ); ?></span>
-					<span itemprop="headline"><?php echo get_bloginfo( 'title' ); ?></span>
-					</h1>
-				</a>
+						<h1 itemprop="headline">
+							<a class="white" href="<?php echo site_url(); ?>">
+								<?php if( !empty( get_bloginfo('description') )) : ?>
+										<span class="small" itemprop="description"><?php echo get_bloginfo ( 'description' ); ?></span>
+								<?php endif; ?>
+								<?php echo get_bloginfo( 'title' ); ?>
+							</a>
+						</h1>
 			
 			</div>
 		</div>

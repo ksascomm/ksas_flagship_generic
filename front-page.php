@@ -61,26 +61,28 @@
 			} 	
 			if ( $news_query->have_posts() ) :
 		?>
-		<h4><?php echo $theme_option['flagship_sub_feed_name']; ?></h4>
+
+	
+		<h3><?php echo $theme_option['flagship_sub_feed_name']; ?></h3>
 		<?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
-		<div class="row">		
-			<section class="twelve columns">
-					<a href="<?php the_permalink(); ?>">
-						<h6><?php the_date(); ?></h6>
-						<h5 class="black"><?php the_title();?></h5>
-						<?php if ( has_post_thumbnail()) { ?> 
-							<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
-						<?php } ?>
-						<?php the_excerpt(); ?>
-					</a>
+
+			<article class="news-item" id="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+				<h5 class="black" itemprop="datePublished"><?php the_date(); ?></h5>
+				<h1 itemprop="headline">
+					<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title();?></a>
+				</h1>
+				<?php if ( has_post_thumbnail()) { ?> 
+					<?php the_post_thumbnail('thumbnail', array('class'	=> "floatleft")); ?>
+				<?php } ?>
+				<?php the_excerpt(); ?>
 					<hr>
-			</section>
-		</div>
+			</article>
+	
 		
 		<?php endwhile; ?>
-		<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><h5 class="black">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h5></a>
+		<h5><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</a></h5>
 		<?php endif; ?>
-		
+
 	</div>	<!-- End main content (left) section -->
 <?php if ( $theme_option['flagship_sub_sidebar']  == '1' ) { locate_template('parts-homepage-sidebar.php', true, false); } ?>	
 </div> <!-- End #landing -->
