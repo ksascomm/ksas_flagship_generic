@@ -50,7 +50,7 @@
   </footer>
 
   <?php locate_template('parts-script-initiators.php', true, false); ?>
-  <?php include_once("parts-analytics.php") ?> 
+
   <?php wp_footer(); ?>
 	</body>
 </html>
