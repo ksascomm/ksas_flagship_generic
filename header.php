@@ -41,7 +41,7 @@
 		<div class="row show-for-small">
 			<div class="four columns centered blue_bg">
 				<div class="twelve columns centered">
-		  			<a href="<?php echo network_site_url(); ?>">
+		  			<a href="http://krieger.jhu.edu/">
 		  				<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="jhu logo" style="width:250px; display:block; margin-left: auto; margin-right: auto;">
 		  			</a>
 		  		</div>
@@ -78,7 +78,7 @@
 		</div>
 		<div class="row">
 			<div class="twelve columns hide-for-small radius10" id="logo_nav">
-				<li class="logo"><a href="<?php echo network_home_url(); ?>" title="Krieger School of Arts & Sciences">Krieger School of Arts & Sciences</a></li>
+				<li class="logo"><a href="http://krieger.jhu.edu/" title="Krieger School of Arts & Sciences" target="_blank">Krieger School of Arts & Sciences</a></li>
 
 						<h1 itemprop="headline">
 							<a class="white" href="<?php echo site_url(); ?>">
