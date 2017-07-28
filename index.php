@@ -20,7 +20,11 @@
 		</article>
 		</div>
 	
-	<?php endwhile; endif; ?>	
+	<?php endwhile;?>
+	<div class="nav-next alignright bold"><?php previous_posts_link( 'Newer posts' ); ?></div>
+	<div class="nav-previous alignleft bold"><?php next_posts_link( 'Older posts' ); ?></div>
+	<?php endif; ?>	
+
 	</main>	
 	</div>	<!-- End main content (left) section -->
 </div> 
