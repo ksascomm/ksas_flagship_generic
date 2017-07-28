@@ -6,8 +6,15 @@
 		<?php $theme_option = flagship_sub_get_global_options(); ?>	
 		<main class="content post-archive">
 		<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
+		
+		<?php $paged = (get_query_var('paged')) ? (int) get_query_var('paged') : 1;
+				$news_archive_query = new WP_Query(array(
+					'post_type' => 'post',
+					'posts_per_page' => 10,
+					'paged' => $paged
+				)); 
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		while ($news_archive_query->have_posts()) : $news_archive_query->the_post(); ?>
 		<div class="row">		
 		<article id="post-<?php the_ID(); ?>" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
 			<h5 class="black" itemprop="datePublished"><?php the_date(); ?></h5>
@@ -21,9 +28,9 @@
 		</div>
 	
 	<?php endwhile;?>
-	<div class="nav-next alignright bold"><?php previous_posts_link( 'Newer posts' ); ?></div>
-	<div class="nav-previous alignleft bold"><?php next_posts_link( 'Older posts' ); ?></div>
-	<?php endif; ?>	
+		<div class="row">
+			<?php flagship_pagination($news_archive_query->max_num_pages); ?>		
+		</div>
 
 	</main>	
 	</div>	<!-- End main content (left) section -->
