@@ -31,9 +31,9 @@
 		 ?>
 		<!-- Social Media -->
 		<nav class="two column">
-			<a href="http://facebook.com/jhuksas" title="Facebook"><span class="fa fa-facebook-official fa-2x"></span></a>
-			<a href="https://www.instagram.com/jhuksas/" title="Instagram"><span class=" fa fa-instagram fa-2x"></span></a>
-			<a href="https://twitter.com/JHUKSAS" title="Twitter"><span class="fa fa-twitter fa-2x"></span></a>
+			<a href="http://facebook.com/JHUArtsSciences" title="Facebook"><span class="fa fa-facebook-official fa-2x"></span></a>
+			<a href="https://www.instagram.com/JHUArtsSciences/" title="Instagram"><span class=" fa fa-instagram fa-2x"></span></a>
+			<a href="https://twitter.com/JHUArtsSciences" title="Twitter"><span class="fa fa-twitter fa-2x"></span></a>
 			<a href="https://www.youtube.com/user/jhuksas" title="YouTube"><span class="fa fa-youtube-square fa-2x"></span></a>
 		</div>
 		
