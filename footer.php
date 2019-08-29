@@ -40,7 +40,7 @@
 		
   	</div>
   	<!-- Copyright and Address -->
-  	<div class="row" id="copyright" role="content-info">
+  	<div class="row" id="copyright">
   		<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, <?php echo $theme_option['flagship_sub_copyright'];?></p>
   	</div>
 	<div class="row hide-for-print">
