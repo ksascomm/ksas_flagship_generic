@@ -133,3 +133,11 @@ h1.page-title {
 .blue_bg h2.white {
 	color: #fff;
 }
+
+.sidebar_bg ul.nav li a:focus, #sidebar li a:focus, #logo_nav a:focus, .logo a:focus {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+#search-bar input[type="text"]:focus { 
+	outline: -webkit-focus-ring-color auto 5px !important;
+}
