@@ -45,7 +45,7 @@
 		  				<img src="<?php echo get_template_directory_uri() ?>/assets/images/ksas-logo-horizontal.png" alt="jhu logo" style="width:250px; display:block; margin-left: auto; margin-right: auto;">
 		  			</a>
 		  		</div>
-			<h2 class="white" align="center"><?php echo get_bloginfo( 'title' ); ?></h2>
+				<h2 class="white"><?php echo get_bloginfo( 'title' ); ?></h2>
 			</div>
 		</div>
 	
