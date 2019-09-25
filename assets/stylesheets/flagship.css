@@ -25,13 +25,13 @@ body, div, dl, dt, dd, ul, ol, li {
 }
 h1, h2 {
 	font-family: 'quadon', Arial, sans-serif;
-	color: #005eb8;
+	color: #0057AC;
 	font-weight: 400;
 	font-style: normal;
 }
 h3, h4, h5, h6, .semibold {
 	font-family: 'gentona-book', Arial, sans-serif;
-	color: #005eb8;
+	color: #0057AC;
 	font-weight: 400;
 	font-style: normal;
 }
@@ -58,7 +58,7 @@ strong, b, .bold {
 	text-transform: capitalize;
 }
 .copy h2 {
-	color: #005eb8;
+	color: #0057AC;
 }
 p {
 	line-height: 1.5;
@@ -94,7 +94,7 @@ code {
 }
 
 a {
-	color: #005eb8;
+	color: #0057AC;
 }
 
 /******* Reusable Classes ************/
@@ -155,10 +155,10 @@ body.custom-background {
 	color: #418fde;
 }
 .blue_bg, .color1 {
-	background: #005eb8;
+	background: #0057AC;
 }
 .dark_blue_bg, .color8 {
-	background: #005eb8;
+	background: #0057AC;
 }
 .grey_bg, .color9 {
 	background: #666;
@@ -353,7 +353,7 @@ ul {
 .video_thumb .icon-play:before {
 	position: absolute;
 	top: 20%;
-	color: #005eb8;
+	color: #0057AC;
 	left: 36%;
 	font-size: 74px;
 	opacity: .8;
@@ -379,7 +379,7 @@ blockquote:before {
 	bottom: 20%;
 	right: 8%;
 	opacity: .25;
-	color: #005eb8;
+	color: #0057AC;
 }
 .wp-post-image {
 	margin-bottom: 15px;
@@ -502,7 +502,7 @@ ul.breadcrumbs a {
 	margin: 0 auto;
 }
 #logo_nav {
-	background: #005eb8;
+	background: #0057AC;
 	width: 100%;
 	max-width: 1000px;
 	-webkit-border-top-right-radius: 10px;
@@ -655,7 +655,7 @@ aside ul.nav li {
 #sidebar .widget_title {
 	padding: 10px 0;
 	margin-bottom: 15px;
-	background-color: #005eb8;
+	background-color: #0057AC;
 	color: #FFF;
 }
 #sidebar h6 {
@@ -667,10 +667,11 @@ aside ul.nav li {
 }
 .sidebar_bg ul.nav li a, #sidebar li a {
 	font-family: 'gentona-book', Arial, sans-serif;
-	color: #005eb8;
+	color: #0057AC;
 	font-weight: 400;
 	font-style: normal;
 }
+
 .textwidget, .hub article, .ksas_books article, .ksas_recent article {
 	margin: 0 20px 40px 20px !important;
 }
