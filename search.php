@@ -15,7 +15,7 @@ get_header(); ?>
 <div class="row sidebar_bg radius10">
 <?php locate_template('parts-nav-sidebar.php', true, false); ?>
 	<div class="nine columns wrapper radius-right offset-topgutter">
-		<h1 class="page-title">Search Results: <strong><?php echo esc_attr(get_search_query()); ?></strong></h2>
+		<h1 class="page-title">Search Results: <strong><?php echo esc_attr(get_search_query()); ?></strong></h1>
         
         <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         <article <?php post_class(''); ?> itemscope itemtype="http://schema.org/BlogPosting" aria-labelledby="post-<?php the_ID(); ?>">
