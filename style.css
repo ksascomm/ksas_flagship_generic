@@ -84,6 +84,11 @@ section .panel ul {
 	color: #2C2C33;
 	border-bottom-style: solid;
 }
+
+.wrapper a:focus {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
 ul.breadcrumbs {
 	background: none;
 	padding: 0;
